@@ -70,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
                     productPrice.setText("");
                     viewProducts();
                 }
+                else if (!validator.validProductName(name)) {
+                    Toast.makeText(MainActivity.this, "Invalid Product Name", Toast.LENGTH_SHORT).show();
+                }
+                else if (!validator.validProductPrice(strPrice)) {
+                    Toast.makeText(MainActivity.this, "Invalid Product Price", Toast.LENGTH_SHORT).show();
+                }
 //                Toast.makeText(MainActivity.this, "Add product", Toast.LENGTH_SHORT).show();
 
             }
